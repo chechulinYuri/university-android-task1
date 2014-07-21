@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Задание 1</string>
+    <string name="title_activity_my">MyActivity</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_my_activity2">MyActivity2</string>
+    <string name="title_first_name">Имя</string>
+    <string name="title_last_name">Фамилия</string>
+    <string name="title_bday">Дата рождения</string>
+    <string name="title_login">Войти</string>
+
+</resources>
