@@ -9,4 +9,6 @@
     <string name="title_bday">Дата рождения</string>
     <string name="title_login">Войти</string>
     <string name="title_age">Возраст</string>
+    <string name="hint_enterFirstName">Введите имя</string>
+    <string name="hint_enterLastName">Введите фамилию</string>
 </resources>

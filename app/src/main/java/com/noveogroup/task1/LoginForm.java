@@ -13,18 +13,14 @@ import java.util.Date;
 
 public class LoginForm extends ActionBarActivity {
 
-    public static String firstName;
-    public static String lastName;
-    public static int bDayDate;
-    public static int bDayMonth;
-    public static int bDayYear;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.login_form);
 
         Button loginButton = (Button) findViewById(R.id.loginBtn);
+        DatePicker dp = (DatePicker) findViewById(R.id.bday);
+        dp.setMaxDate(new Date().getTime());
 
         loginButton.setOnClickListener(new View.OnClickListener() {
 
@@ -34,14 +30,23 @@ public class LoginForm extends ActionBarActivity {
                 TextView lastNameView = (TextView) findViewById(R.id.lastNameView);
                 DatePicker datePicker = (DatePicker) findViewById(R.id.bday);
 
-                bDayDate = datePicker.getDayOfMonth();
-                bDayMonth = datePicker.getMonth();
-                bDayYear =  datePicker.getYear();
-
-                firstName = firstNameView.getText().toString();
-                lastName = lastNameView.getText().toString();
+                int bDayDate = datePicker.getDayOfMonth();
+                int bDayMonth = datePicker.getMonth();
+                int bDayYear =  datePicker.getYear();
+                String firstName = firstNameView.getText().toString();
+                String lastName = lastNameView.getText().toString();
 
                 Intent myIntent = new Intent(LoginForm.this, OutputForm.class);
+
+                Bundle mBundle = new Bundle();
+                mBundle.putString("firstName", firstName);
+                mBundle.putString("lastName", lastName);
+                mBundle.putInt("bDayDate", bDayDate);
+                mBundle.putInt("bDayMonth", bDayMonth);
+                mBundle.putInt("bDayYear", bDayYear);
+
+                myIntent.putExtras(mBundle);
+
                 LoginForm.this.startActivity(myIntent);
             }
         });

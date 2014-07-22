@@ -1,5 +1,6 @@
 package com.noveogroup.task1;
 
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.widget.TextView;
@@ -12,15 +13,16 @@ public class OutputForm extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.output_form);
 
+        Intent mIntent = getIntent();
+        Bundle extras = mIntent.getExtras();
+
         TextView firstNameView = (TextView) findViewById(R.id.firstNameLabel);
         TextView lastNameView = (TextView) findViewById(R.id.lastNameLabel);
         TextView bdayView = (TextView) findViewById(R.id.bdayLabel);
-        Integer age = getAge(LoginForm.bDayYear, LoginForm.bDayMonth, LoginForm.bDayDate);
+        Integer age = getAge(extras.getInt("bDayYear"), extras.getInt("bDayMonth"), extras.getInt("bDayDate"));
 
-        System.out.println(LoginForm.bDayYear + " " + LoginForm.bDayMonth + " " +  LoginForm.bDayDate);
-
-        firstNameView.setText(LoginForm.firstName);
-        lastNameView.setText(LoginForm.lastName);
+        firstNameView.setText(extras.getString("firstName"));
+        lastNameView.setText(extras.getString("lastName"));
         bdayView.setText(age.toString());
     }
 

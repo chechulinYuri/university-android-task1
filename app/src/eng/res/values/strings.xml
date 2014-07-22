@@ -9,4 +9,6 @@
     <string name="title_bday">Birth day</string>
     <string name="title_login">Login</string>
     <string name="title_age">Age</string>
+    <string name="hint_enterFirstName">Enter first name</string>
+    <string name="hint_enterLastName">Enter last name</string>
 </resources>
