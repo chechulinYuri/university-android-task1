@@ -37,7 +37,7 @@
             android:layout_height="wrap_content"/>
     </LinearLayout>
 
-    <!--  Bday Label -->
+    <!-- Age Label -->
     <LinearLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
         android:orientation="horizontal"
@@ -46,7 +46,7 @@
         android:padding="10dip">
         <TextView android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:text="@string/title_bday"
+            android:text="@string/title_age"
             android:paddingRight="10dip"/>
         <TextView android:id="@+id/bdayLabel"
             android:layout_width="fill_parent"

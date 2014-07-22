@@ -3,7 +3,7 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:padding="10dip">
+    android:padding="5dip">
 
     <!--  First name Label -->
     <TextView android:layout_width="fill_parent"
@@ -13,7 +13,7 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dip"
-        android:layout_marginBottom="20dip"
+        android:layout_marginBottom="10dip"
         android:singleLine="true"/>
 
     <!--  Last name Label -->
@@ -24,19 +24,19 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dip"
-        android:layout_marginBottom="20dip"
+        android:layout_marginBottom="10dip"
         android:singleLine="true"/>
 
     <!--  Bday Label -->
     <TextView android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:text="@string/title_bday"/>
-    <EditText android:id="@+id/bdayView"
+    <DatePicker
+        android:id="@+id/bday"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="5dip"
-        android:layout_marginBottom="20dip"
-        android:singleLine="true"/>
+        android:calendarViewShown="false"
+        android:spinnersShown="true" />
 
     <!-- Login button -->
     <Button android:id="@+id/loginBtn"

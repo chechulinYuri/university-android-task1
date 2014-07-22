@@ -7,5 +7,6 @@
     <string name="title_first_name">First name</string>
     <string name="title_last_name">Last name</string>
     <string name="title_bday">Birth day</string>
+    <string name="title_age">Age</string>
     <string name="title_login">Login</string>
 </resources>

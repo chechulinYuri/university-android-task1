@@ -8,4 +8,5 @@
     <string name="title_last_name">Фамилия</string>
     <string name="title_bday">Дата рождения</string>
     <string name="title_login">Войти</string>
+    <string name="title_age">Возраст</string>
 </resources>
