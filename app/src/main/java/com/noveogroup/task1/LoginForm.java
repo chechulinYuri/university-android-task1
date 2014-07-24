@@ -1,14 +1,15 @@
 package com.noveogroup.task1;
 
+import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.DatePicker;
+import android.widget.EditText;
 import android.widget.TextView;
-
-import java.util.Calendar;
 import java.util.Date;
 
 public class LoginForm extends ActionBarActivity {
@@ -18,10 +19,25 @@ public class LoginForm extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.login_form);
 
+        // Set max date for datepicker
         Button loginButton = (Button) findViewById(R.id.loginBtn);
         DatePicker dp = (DatePicker) findViewById(R.id.bday);
         dp.setMaxDate(new Date().getTime());
 
+
+        // Hide keyboard
+        final EditText editText = (EditText) findViewById(R.id.lastNameView);
+        editText.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+            public void onFocusChange(View v, boolean hasFocus) {
+                if(!hasFocus) {
+                    InputMethodManager imm = (InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE);
+                    imm.hideSoftInputFromWindow(editText.getWindowToken(), 0);
+                }
+            }
+        });
+
+
+        // Button handler
         loginButton.setOnClickListener(new View.OnClickListener() {
 
             @Override
