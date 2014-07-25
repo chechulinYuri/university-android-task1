@@ -19,10 +19,10 @@ public class OutputForm extends ActionBarActivity {
         TextView firstNameView = (TextView) findViewById(R.id.firstNameLabel);
         TextView lastNameView = (TextView) findViewById(R.id.lastNameLabel);
         TextView bdayView = (TextView) findViewById(R.id.bdayLabel);
-        Integer age = getAge(extras.getInt("bDayYear"), extras.getInt("bDayMonth"), extras.getInt("bDayDate"));
+        Integer age = getAge(extras.getInt(LoginForm.BDYEAR), extras.getInt(LoginForm.BDMONTH), extras.getInt(LoginForm.BDDATE));
 
-        firstNameView.setText(extras.getString("firstName"));
-        lastNameView.setText(extras.getString("lastName"));
+        firstNameView.setText(extras.getString(LoginForm.FNAME));
+        lastNameView.setText(extras.getString(LoginForm.LNAME));
         bdayView.setText(age.toString());
     }
 

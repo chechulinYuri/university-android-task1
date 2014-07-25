@@ -14,6 +14,12 @@ import java.util.Date;
 
 public class LoginForm extends ActionBarActivity {
 
+    public static final String FNAME = "FNAME";
+    public static final String LNAME = "LNAME";
+    public static final String BDDATE = "BDDATE";
+    public static final String BDMONTH = "BDMONTH";
+    public static final String BDYEAR = "BDYEAR";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -55,11 +61,11 @@ public class LoginForm extends ActionBarActivity {
                 Intent myIntent = new Intent(LoginForm.this, OutputForm.class);
 
                 Bundle mBundle = new Bundle();
-                mBundle.putString("firstName", firstName);
-                mBundle.putString("lastName", lastName);
-                mBundle.putInt("bDayDate", bDayDate);
-                mBundle.putInt("bDayMonth", bDayMonth);
-                mBundle.putInt("bDayYear", bDayYear);
+                mBundle.putString(FNAME, firstName);
+                mBundle.putString(LNAME, lastName);
+                mBundle.putInt(BDDATE, bDayDate);
+                mBundle.putInt(BDMONTH, bDayMonth);
+                mBundle.putInt(BDYEAR, bDayYear);
 
                 myIntent.putExtras(mBundle);
 
